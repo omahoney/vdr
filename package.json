@@ -1,0 +1,31 @@
+{
+  "name": "app",
+  "private": true,
+  "dependencies": {
+    "@rails/webpacker": "3.5",
+    "activestorage": "^5.2.2",
+    "bootstrap": "^4.3.1",
+    "bootswatch": "^4.3.1",
+    "datatables.net": "^1.10.19",
+    "datatables.net-bs": "^1.10.19",
+    "datatables.net-bs4": "^1.10.19",
+    "datatables.net-buttons": "^1.5.4",
+    "datatables.net-buttons-bs4": "^1.5.4",
+    "datatables.net-responsive": "^2.2.3",
+    "datatables.net-responsive-bs": "^2.2.3",
+    "datatables.net-select": "^1.2.7",
+    "datatables.net-select-bs": "^1.2.7",
+    "imports-loader": "^0.8.0",
+    "jquery": "^3.3.1",
+    "jquery-ujs": "^1.2.2",
+    "popper.js": "^1.14.7",
+    "postcss-smart-import": "^0.7.6",
+    "rails-ujs": "^5.2.2",
+    "turbolinks": "^5.2.0",
+    "webpack-merge": "^4.2.1"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.7.2",
+    "webpack-dev-server": "2.11.2"
+  }
+}

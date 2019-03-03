@@ -1,0 +1,31 @@
+
+<nav class="navbar navbar-expand-md navbar-light bg-light shadow p-3 mb-5 bg-white rounded sticky-top">
+  <a class="navbar-brand" href="/">
+
+        Virtual Data Room
+
+  </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
+    <span class="navbbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+
+
+    </ul> 
+    <ul class="navbar-nav">
+      <% if user_signed_in? %>
+      <%= render 'layouts/navigation_links' %>
+
+
+    </ul> 
+    <ul class="navbar-nav ml-auto">   
+          <li class="nav-item"><%= link_to current_user.username, edit_user_registration_path, :class => "nav-link" %></li>
+          <li class="nav-item"><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete', :class => "nav-link" %></li>
+      <% else %>
+          <li class="nav-item"><%= link_to 'Sign in', new_user_session_path, :class => "nav-link" %></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>

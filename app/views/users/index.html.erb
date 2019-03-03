@@ -1,0 +1,40 @@
+<script type="text/javascript">
+$(document).on(function(){
+    $("table[role='datatable']").each(function(){
+        $(this).DataTable({});
+    });
+})
+</script>
+
+<div class="page-header">
+  <% if current_user.admin? %>
+    <%= link_to new_user_registration_path, :class => 'btn btn-primary pull-right float-right' do %>
+    <span class="a fa-plus"></span>
+    New User
+    <% end %>
+  <% end %>
+  <h1>List Users</h1>
+</div>
+
+<div class="table-responsive">
+  <table role='datatable' id="usersTable" class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Email</th>
+        <th>Created</th>
+        <th>Updated</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= content_tag_for(:tr, @users) do |user| %>
+        <tr>
+          <td><%= user.email %></td>
+          <td><%= user.created_at %></td>
+          <td><%= user.updated_at %></td>
+          <td><%= user.role %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
